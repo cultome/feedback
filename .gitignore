@@ -21,3 +21,4 @@ src/main/webapp/img/
 src/main/webapp/index.html
 build/
 node_modules/
+target/
