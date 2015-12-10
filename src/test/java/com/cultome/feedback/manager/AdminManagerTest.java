@@ -82,7 +82,7 @@ public class AdminManagerTest {
 	
 	@Test
 	public final void testCreateUser() throws Exception {
-		User u = manager.createUser("5056186", "soria");
+		User u = manager.createUser("5056186", "carlos");
 		assertNotNull(u);
 		assertNotNull(u.getExpires());
 		assertNotNull(u.getPassword());

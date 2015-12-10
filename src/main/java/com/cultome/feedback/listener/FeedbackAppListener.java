@@ -36,7 +36,7 @@ public class FeedbackAppListener implements ServletContextListener {
 		}
 		
 		try {
-			new AdminManager().createUser("5056186", "carlos");
+			new AdminManager().createUser("admin", "admin");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

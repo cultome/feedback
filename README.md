@@ -1,8 +1,33 @@
 Feedback
 ==============
 
+A poll generator. Use a very simple script to create a quick poll and send it to your users.
+
+There are some rough edges still, like configurations are in code (please take a look at ```com.cultome.feedback.util.Parameters}```), but stills pretty usable.
+ 
+
 Usage
 ====
+
+Before creating a war file using maven, you need to process the web client code, for this I use Grunt.js, but first you need to run ```npm install``` inside the ```webclient``` folder.
+
+Once you ran the Grunt script, you can use maven to create the war file.
+
+```mvn package```
+
+You can deploy this war file in a Tomcat server. When the application is up and ready, you can access the admin interface with the path:
+
+```
+http://localhost:8080/feedback/admin.html
+```
+
+Assuming you deployed in a Tomcat in your localhost with the default configuration.
+
+You'll be required to introduce a username/password, type yours o use the default one "admin/admin".
+
+
+The Script
+==========
 
 ```{Title}``` Declares the poll title
 
@@ -13,9 +38,12 @@ Usage
   * ```->``` Combo Box. Can choose only one option.
   * ```___``` Textarea. Free text area.
 
-```{Config}``` Add a configuration to a question. At this moment only one attribute is valid:
+```{Config}``` Add a configuration to a question.:
 
-  * ```choose => n``` Apply to Checkboxes only. Add a validation where the user can only choose, at most, n options.
+  * ```choose => <n>``` Apply to checkboxes only. Add a validation where the user can only choose, at most, n options.
+  * ```labels => true``` Tells application that takes the answers of this question to generate the classification legends in the answer graphic.
+  * ```axis => <axis label>``` Create an axis label for this question in the answers graphic.
+  * ```order => ascending|descending``` Create a value order for the options in this question. Default is ascending (the first option weight 0, the last option 100).
 
 ```{SendTo}``` Declares the sender list. The emails should be separed by commas.
 
