@@ -12,3 +12,12 @@
 hs_err_pid*
 
 feedback_server.db
+src/main/webapp/admin.html
+src/main/webapp/admin.min.js
+src/main/webapp/app.min.js
+src/main/webapp/feedback.min.css
+src/main/webapp/fonts/
+src/main/webapp/img/
+src/main/webapp/index.html
+build/
+node_modules/
