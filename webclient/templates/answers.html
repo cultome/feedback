@@ -1,0 +1,49 @@
+<div class="row" ng-init="init()">
+  <div class="row">
+    <div class="col-md-offset-1 col-md-9" id="answers" ng-bind-html="answers"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-1">&nbsp;</div>
+
+    <div class="col-md-2" ng-hide="currentView == 'table'">
+      <a
+        id="switch"
+        ng-click="switchToTableView()"
+        class="btn btn-default btn-block">
+        Table View
+      </a>
+    </div>
+
+    <div class="col-md-2" ng-hide="currentView == 'summary'">
+      <a
+        id="switch"
+        class="btn btn-default btn-block"
+        ng-click="switchToSummaryView()">
+        Summary View
+      </a>
+    </div>
+
+    <div class="col-md-2" ng-hide="currentView == 'graph'">
+      <a
+        id="switch"
+        class="btn btn-default btn-block"
+        ng-click="switchToGraphView()">
+        Graphic View
+      </a>
+    </div>
+
+    <div class="col-md-2">
+      <a
+        id="switch"
+        ng-click="update()"
+        class="btn btn-primary btn-block">
+        Update
+      </a>
+    </div>
+
+    <div class="col-md-3">
+      <a href="#/admin/list" id="list" class="btn btn-success btn-block">Back to Poll List</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,56 @@
+<div class="row">
+  <div class="col-md-offset-1 col-md-5 edit-panel">
+    <div class="col-md-12">
+      <h3>Script</h3>
+      <textarea
+        rows="20"
+        class="form-control panel"
+        id="script"></textarea>
+      <input
+        type="button"
+        class="btn btn-info btn-block"
+        id="update"
+        ng-click="updatePreview()"
+        ng-show="isEnabled()"
+        value="Update Preview">
+    </div>
+  </div>
+    
+  <div class="col-md-6">
+    <div class="col-md-12">
+      <h3>Preview</h3>
+      <h4 class="col-md-11" id="preview-title">{{title}}</h4>
+      <div class="col-md-11" id="preview" ng-bind-html="preview"></div>
+    </div>
+
+    <div class="col-md-12" ng-show="hasEmailTags()">
+      <h3>E-Mail Preview</h3>
+      <h4 class="col-md-11" id="preview-subject" ng-show="subject">Subject: <small>{{subject}}</small></h4>
+      <div class="col-md-11" id="previewEmail">
+        <!-- email -->
+        <table border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse">
+          <tr style="height: 18px" ng-show="emailTitle">
+            <td style="border: solid #2E74B5 1.5px; background: #2E74B5; padding: 10px 30px 0px 30px;">
+              <p>
+                <b><span style="font-size: 16px; font-family: 'Arial', sans-serif; color: white">{{emailTitle}}</span></b>
+              </p>
+            </td>
+          </tr>
+
+          <tr ng-show="content">
+            <td style="border: solid #2E74B5 1.5px; padding: 5px 10px 5px 10px">
+              <p style="text-align: justify; text-autospace: none">
+                <span style="font-family: 'Arial', sans-serif; color: black" ng-bind-html="content"></span>
+              </p>
+              
+              <p style="margin-left: 36px; text-align: justify; text-autospace: none">
+                <b><span style="font-family: 'Arial', sans-serif; color: #2E75B6">{{sign}}</span></b>
+              </p>
+            </td>
+          </tr>
+        </table>
+        <!-- /email -->
+      </div>
+    </div><!-- email preview -->
+  </div><!-- col-md-6 -->
+</div><!-- row -->

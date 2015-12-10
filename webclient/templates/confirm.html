@@ -1,0 +1,19 @@
+<div class="modal fade" id="confirm" tabindex="-1" role="dialog" aria-labelledby="confirmLabel">
+  <div class="modal-dialog" role="document">
+    <div class="panel panel-{{alertType}}">
+      <div class="panel-heading">
+        <h3 class="panel-title">{{title}}</h3>
+      </div>
+      
+      <div class="panel-body" ng-bind-html="message"></div>
+
+      <div class="panel-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button
+          type="button"
+          class="btn btn-{{alertType}} pull-right"
+          ng-click="ok()">{{okLabel}}</button>
+      </div>
+    </div>
+  </div>
+</div>

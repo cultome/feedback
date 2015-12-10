@@ -1,0 +1,106 @@
+.title {
+  margin-left: 200px;
+}
+
+.panel {
+  width: 100%;
+}
+
+.poll-tags {
+  float: right;
+}
+
+.poll-tags span.label {
+  margin-left: 5px;
+}
+
+h3.title {
+  text-align: center;
+}
+
+div.footer {
+  background-color: #f8f8f8;
+  height: 20px;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+
+  color: #777;
+  text-align: center;
+  font-size: 14px;
+}
+
+.edit-panel {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.error-footer {
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442;
+}
+
+.main-content {
+  padding-bottom: 60px;
+}
+
+/* Editor */
+.cm-control-char {
+  color: #8C04A8;
+}
+
+.cm-directive {
+  color: #B939D3;
+}
+
+.cm-param-name {
+  color: #8C04A8;
+}
+
+.cm-param-value {
+  color: #91A200;
+}
+
+.cm-data {
+  color: #FFA500;
+}
+
+.cm-option {
+  color: #8C04A8;
+}
+.CodeMirror.cm-s-default {
+  min-height: 600px;
+}
+
+
+
+/*
+ * Graphs
+ */
+#graph {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.radar-legend {
+  list-style: none;
+}
+
+.legend {
+  border: 3px solid;
+}
+
+.radar-legend > li {
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+
+.btn-xs {
+  padding: 0px 5px !important;
+  line-height: 1 !important;
+}

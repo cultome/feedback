@@ -1,0 +1,33 @@
+<div ng-init="init()">
+  <div class="row">
+    <div id="items" class="col-md-offset-1 col-md-11">
+      <ul class="list-group">
+        <li class="list-group-item" 
+            ng-repeat="poll in polls">
+          <a href="#/admin/edit?p={{poll.id}}">{{poll.title}}</a>
+          <span class="poll-tags">
+            <span class="label label-success">{{poll.questions.length}} questions</span>
+            <span class="label label-{{getStatusType(poll.sent)}}">{{getStatusText(poll.sent)}}</span>
+            <button
+              class="btn btn-danger btn-xs"
+              ng-click="prepareDeletion(poll.id)"
+              data-toggle="modal" data-target="#confirm"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-offset-1 col-md-4">
+      <a href="#/admin/new" class="btn btn-default btn-block">New Poll</a>
+    </div>
+  </div>
+
+  <confirm
+    alert-type="danger"
+    title="Are you sure of delete this survey!"
+    message="<span  style='color: RED'><b>CAUTION:</b> If you delete this survey all the informacion associated with it will be lost.</span>"
+    ok-label="I'm sure!"
+    ok="delete()"></confirm>
+</div>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Feedback">
+<head>
+  <title>Feedback</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/codemirror.css" />
+  <link rel="stylesheet" type="text/css" href="css/show-hint.css" />
+  <link rel="stylesheet" type="text/css" href="css/app.css" />
+
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/underscore-min.js"></script>
+  <script type="text/javascript" src="js/angular.min.js"></script>
+  <script type="text/javascript" src="js/angular-route.min.js"></script>
+  <script type="text/javascript" src="js/angular-resource.min.js"></script>
+  <script type="text/javascript" src="js/angular-sanitize.min.js"></script>
+  <script type="text/javascript" src="js/codemirror.js"></script>
+  <script type="text/javascript" src="js/simple.js"></script>
+  <script type="text/javascript" src="js/matchbrackets.js"></script>
+  <script type="text/javascript" src="js/show-hint.js"></script>
+  <script type="text/javascript" src="js/active-line.js"></script>
+  <script type="text/javascript" src="js/admin/app.js"></script>
+  <script type="text/javascript" src="js/Chart.Core.js"></script>
+  <script type="text/javascript" src="js/Chart.Bar.js"></script>
+  <script type="text/javascript" src="js/Chart.Doughnut.js"></script>
+  <script type="text/javascript" src="js/Chart.Line.js"></script>
+  <script type="text/javascript" src="js/Chart.PolarArea.js"></script>
+  <script type="text/javascript" src="js/Chart.Radar.js"></script>
+  
+  <!-- app.css -->
+  <!-- admin.js -->
+
+</head>
+
+<body ng-controller="RootController">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand"><img src="img/logo.png"></a>
+        <h3 class="navbar-text navbar-right title" ng-bind-html="title"></h3>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#/admin/new">Create</a></li>
+          <li><a href="#/admin/list">List</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div id="alerts" class="col-md-offset-1 col-md-10"></div>
+
+  <login></login>
+  
+  <div class="col-md-11 main-content" ng-view></div>
+
+  <div class="footer">Made with <span class="glyphicon glyphicon-heart" aria-hidden="true"></span></div>
+</body>
+</html>

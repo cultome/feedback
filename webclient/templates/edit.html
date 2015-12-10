@@ -1,0 +1,49 @@
+<form ng-init="init()">
+    <edit-panel enabled="isEditable"></edit-panel><br>
+
+    <div class="row">
+      <div class="col-md-offset-1 col-md-2">
+        <a  href="#/admin/new" class="btn btn-default btn-block" >New Poll</a>
+      </div>
+      <div class="col-md-3">
+        <a href="#/admin/list" id="list" class="btn btn-success btn-block">List</a>
+      </div>
+      <div
+        class="col-md-offset-1 col-md-4"
+        id="answersBtn"
+        ng-hide="isEditable()">
+        <a
+          href="#/admin/answers?p={{currentPoll.id}}"
+          id="answers"
+          class="btn btn-primary btn-block">Review Answers</a>
+      </div>
+      <div
+        class="col-md-3"
+        id="submitBtn"
+        ng-show="isEditable()">
+        <input
+          id="submit"
+          type="button"
+          class="btn btn-primary btn-block"
+          ng-click="update()"
+          ng-show="isEditable()"
+          value="Save Changes">
+      </div>
+
+      <div class="col-md-3" id="sendBtn" ng-show="isEditable()">
+        <input
+          id="send"
+          type="button"
+          class="btn btn-warning btn-block"
+          data-toggle="modal" data-target="#confirm"
+          value="Send Poll">
+      </div>
+    </div>
+
+    <confirm
+      alert-type="primary"
+      title="You are about to send the poll!"
+      message="Are you sure you want to send this poll to defined contacts?<br><br><span  style='color: RED'><b>CAUTION:</b> We will send saved poll. If you have unsaved changes, please save before send the poll.</span>"
+      ok-label="Send!"
+      ok="send()"></confirm>
+  </form>

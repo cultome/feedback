@@ -1,0 +1,29 @@
+<form ng-init="init()">
+  <edit-panel></edit-panel><br>
+  
+  <div class="row">
+    <div class="col-md-offset-1 col-md-2">
+      <input
+        type="reset"
+        id="clean"
+        class="btn btn-default btn-block"
+        value="Clean">
+    </div>
+
+    <div class="col-md-3">
+      <a
+        href="#/admin/list"
+        id="list"
+        class="btn btn-success btn-block">List</a>
+    </div>
+
+    <div class="col-md-offset-1 col-md-4">
+      <input
+        type="button"
+        class="btn btn-primary btn-block"
+        id="create"
+        ng-click="create()"
+        value="Create Poll">
+    </div>
+  </div>
+</form>
