@@ -363,8 +363,8 @@ angular.module("Feedback").factory("Editor", [function() {
 
 
 
-angular.module("Feedback").factory("AdminPollDao", ['$resource', function($resource) {
-  'use strict';
+angular.module("Feedback").factory("AdminPollDao", ["$resource", function($resource) {
+  "use strict";
 
   var AdminPollsResource = $resource(serviceEndpoint + "/polls/admin/:pollId/:actionId", {
     pollId: "@id", actionId: "@actionId"
@@ -411,7 +411,7 @@ angular.module("Feedback").factory("AdminPollDao", ['$resource', function($resou
       return AdminPollsResource.get({pollId: pollId, actionId: "answers"}, {}, checkAuthError(onSuccess), checkAuthError(onError));
     },
 
-    delete: function(pollId, onSuccess, onError){
+    "delete": function(pollId, onSuccess, onError){
       return AdminPollsResource.delete({pollId: pollId}, checkAuthError(onSuccess), checkAuthError(onError));
     }
   };

@@ -22,3 +22,4 @@ src/main/webapp/index.html
 build/
 node_modules/
 target/
+.settings/

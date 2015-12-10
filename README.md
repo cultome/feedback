@@ -47,71 +47,73 @@ Regards,
 Example
 =======
 ```
-{Title} Encuesta de Satisfacción sobre algun servicio
+{Title} Encuesta de Satisfaccion sobre algun servicio
 
-{Question} A que Dirección de Staff Reporta? 
+{Question} A que Direccion de Staff Reporta? 
 {Config optional => true}
+{Config labels => true}
 -> ITD
 -> P &amp; A
--> Ingeniería
+-> Ingenieria
 -> FSC
 -> HR
 -> Marketing
 
 
 {Question} Que intereses tienes de crecimiento
-[] Informática
+[] Informatica
 [] Operaciones Aduana
 [] Operaciones Domestico
 [] Retails
 
 
-{Question} ¿Considera usted que los empleados de IT en este proyecto tienen buena disposición ante sus requerimientos?
+{Question} Considera usted que los empleados de IT en este proyecto tienen buena disposicion ante sus requerimientos?
+{Config axis => Disposicion}
 () Totalmente en desacuerdo
 () Parcialmente en desacuerdo
 () Neutral
 () Parcialmente de acuerdo
 () Totalmente de acuerdo
 
-{Question} ¿Las solicitudes presentadas por usted son atendidas y solucionadas de forma oportuna?
-
+{Question} Las solicitudes presentadas por usted son atendidas y solucionadas de forma oportuna?
+{Config axis => Atencion}
 () Totalmente en desacuerdo
 () Parcialmente en desacuerdo
 () Neutral
 () Parcialmente de acuerdo
 () Totalmente de acuerdo
 
-{Question} ¿En términos de calidad sus requerimientos son atendidos satisfactoriamente?
-
+{Question} En terminos de calidad sus requerimientos son atendidos satisfactoriamente?
+{Config axis => Calidad}
 () Totalmente en desacuerdo
 () Parcialmente en desacuerdo
 () Neutral
 () Parcialmente de acuerdo
 () Totalmente de acuerdo
 
-{Question} ¿Ve necesario incrementar los recursos del área que lo atendió?
-
+{Question} Ve necesario incrementar los recursos del area que lo atendio?
+{Config axis => Recursos}
 () Totalmente en desacuerdo
 () Parcialmente en desacuerdo
 () Neutral
 () Parcialmente de acuerdo
 () Totalmente de acuerdo
 
-{Question} ¿Por qué?
+{Question} Por que?
 ____________________
 
-{Question} ¿Como valoraría el área que está evaluando?
-
+{Question} Como valoraria el area que esta evaluando?
+{Config axis => General}
 () Fuerte necesidad de mejora
 () Alguna necesidad de mejora
 () Neutral
-() Cumplió con mis expectativas
-() Excedió mis expectativas
+() Cumplio con mis expectativas
+() Excedio mis expectativas
 
-{Question} ¿Por favor escriba una sugerencia de como podemos mejorar para otros proyectos?
+{Question} Por favor escriba una sugerencia de como podemos mejorar para otros proyectos?
 ____________________
 
-{Question} ¿Cumplió su expectativa inicial?
+{Question} Cumplio su expectativa inicial?
 () Si
 () No
 () Neutral
